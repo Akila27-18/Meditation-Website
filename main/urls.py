@@ -15,6 +15,7 @@ urlpatterns = [
     path("free-trial/", views.free_trial_view, name="free_trial"),
     path("payment/", views.payment_view, name="payment"),
     path("success/", views.success_view, name="success"),
+    path("success1/", views.success_page, name="success_page"),
     
 
 ]

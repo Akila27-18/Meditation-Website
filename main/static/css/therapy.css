@@ -14,29 +14,37 @@
   line-height: 1.6;
 }
 
+/* Section Title */
 .service-title {
-  color: #6c1d63;
-  font-weight: 600;
+  color: #7c5aa3; /* your theme color */
+  font-weight: bold;
 }
 
+/* Service Cards */
 .service-card {
+  text-align: center;
+  border-radius: 30px 0 30px 0 ;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 6px 15px rgba(174, 12, 120, 0.726);
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0px 6px 15px rgba(174, 12, 120, 0.726);
 }
 
+/* Images inside cards */
 .service-img {
-  border-radius: 12px;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 250px;
+border-radius: 30px 0 30px 0;
+  box-shadow: 3px rgba(124, 90, 163, 0.4); /* purple shadow */
 }
 
+/* Text under images */
 .service-text {
-  margin-top: 12px;
-  font-weight: 500;
-  color: #222;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #7c5aa3; /* purple/maroon font color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* subtle dark shadow */
 }

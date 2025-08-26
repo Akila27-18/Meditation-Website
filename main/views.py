@@ -119,13 +119,22 @@ def approach_form_view(request):
     if request.method == "POST":
         form = ApproachForm(request.POST)
         if form.is_valid():
-            # Save or process the form
-            form.save()   # only works if it's a ModelForm
-            return redirect("success")
+            # Access form data
+            first_name = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['last_name']
+            email = form.cleaned_data['email']
+            # ... handle data (save to DB manually, send email, etc.)
+            print(first_name, last_name, email)  # Debugging
+
+            return redirect("success_page")  # replace with your success page
     else:
-        form = ApproachForm()   # ✅ form always initialized here
+        form = ApproachForm()
 
     return render(request, "approach_form.html", {"form": form})
+
+
+def success_page(request):
+    return render(request, "success1.html")
 
 from django.shortcuts import render
 

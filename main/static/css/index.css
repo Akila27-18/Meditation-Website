@@ -6,15 +6,22 @@
 @media(min-width:992px){.hero-img{height:360px}}
 
 
-.btn-primary-cta{background:linear-gradient(90deg,#7443c2,#5bd3a4);border:0;color:#fff;font-weight:700}
+.btn-primary-cta {
+  background: blue;   /* blue background */
+  border: 0;
+  color: black;
+  font-weight: 700;
+  transform: translate(-500px, -50%);        /* moved left 500px */
+}
+
 .btn-primary-cta:hover{filter:brightness(.95)}
 
 .section-pad{padding-top:42px;padding-bottom:42px}
 .section-title{letter-spacing:.3px}
 
-.acronym-list li{display:flex;gap:14px;align-items:flex-start;padding:6px 0;border-bottom:1px solid #eee}
+.acronym-list li{display:flex;gap:5px;align-items:flex-start;margin:10px;border-bottom:1px solid #eee}
 .acronym-list .letter{display:inline-block;width:22px;font-weight:900;color:#7c5aa3}
-.acronym-list .item small{display:block;color:#666;font-size:.85rem}
+.acronym-list .item small{display:block;color:black;font-size:.85rem}
 /* Make sure parent .row is relative */
 /* Wrap the list in a relative container */
 .acronym {
@@ -48,7 +55,7 @@
 
 
 .yoga-img{max-width:360px;width:100%}
-.intro-card{background:linear-gradient(90deg,#eaf8e6,#f3fbef)}
+/* .intro-card{background:linear-gradient(90deg,#eaf8e6,#f3fbef)} */
 
 .stats-bar{background:rgb(91, 118, 91);border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0}
 .text-black .fw-normal{font-weight:400}
@@ -92,15 +99,18 @@
   .read-more:hover {
     text-decoration: underline;
   }
+  .team-card body{
+    background-color: #a9f1a0;
+  }
 
 .gradient-band{background:linear-gradient(180deg,#d8f8ff,#e7ffd8)}
-.testimonial{max-width:680px;border-radius:18px;background:#fff}
+.testimonial{max-width:680px;border-radius:18px;}
 .custom-arrow{width:42px;height:42px;top:50%;transform:translateY(-50%);opacity:1;filter:drop-shadow(0 4px 12px rgba(0,0,0,.15))}
 .custom-arrow span{font-size:28px;color:#333}
 .carousel-indicators [data-bs-target]{width:40px;height:6px;border-radius:6px;background:#e5d8ef}
 .carousel-indicators .active{background:var(--purple)}
 
-.team-card img{height:210px;object-fit:cover;border-radius:16px}
+.team-card img{height:210px;object-fit:cover;border-radius:16px;background-color:#a9f1a0;}
 .round-arrow{width:44px;height:44px;top:-22px;background:#e9ffe6;border-radius:50%;opacity:1;color:#222}
 .round-arrow span{font-size:22px}
 .round-arrow:hover{background:#d8ffd9}
@@ -119,53 +129,85 @@
 }
 
 .services-section {
-  background: linear-gradient(to bottom, #ffe6f0, #fff);
+  background: #fdeff2;
 }
 
-.service-card {
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+.service-box {
+  background: #fff;
   border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
-}
-
-.service-card.active {
-  background: #6a0dad;
-  color: white;
-}
-
-.service-card.active a {
+.service-box.active {
+  background: #6f42c1; /* purple highlight */
   color: #fff;
-  text-decoration: underline;
 }
 
-.read-more {
-  font-size: 0.9rem;
-  color: #6a0dad;
+.service-box .service-title {
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.service-box .read-more {
+  font-size: 14px;
   text-decoration: none;
+  color: inherit;
 }
 
-.read-more:hover {
-  text-decoration: underline;
+.service-box.active .read-more {
+  color: #fff;
 }
+
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.icon-img {
+  width: 40px;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+.service-box i {
+  color: #6c63ff;   /* purple shade like your screenshot */
+  margin-top: 10px;
+  display: block;
+}
+
 
 /* Testimonials */
 .testimonials-section {
   background: linear-gradient(to right, #b3f0ff, #ccffcc);
   border-radius: 20px 20px 0 0;
 }
-
+.testimonial-card img{
+  margin-left: 400px;
+}
 .testimonial-card {
-  max-width: 500px;
-  margin: auto;
-  background: white;
-  padding: 20px;
+  max-width: 700px;
+  padding-left: 300px;
+  padding-bottom: 50px;
+  /* background: white; */
+  
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 20px;       /* adjust width */
+  height:0;       /* adjust height */
+  border-radius: 4px; /* rounded corners (0 for square) */
+  background-color: #7c5aa3; /* custom color */
 }
 
 /* FAQ Section */

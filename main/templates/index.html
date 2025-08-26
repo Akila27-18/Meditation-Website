@@ -9,32 +9,35 @@
 <section class="container-xxl mt-3">
   <div class="hero-card rounded-3 overflow-hidden">
     <img src="{% static 'images/hero-1.jpg' %}" alt="Meditation Hero" class="w-100 hero-img">
-    <a href="{% url 'payment' %}" class="btn btn-primary-cta position-absolute top-50 start-50 Left-100 px-4 py-2 rounded-pill">Join Now</a>
-  </div>
+<a href="{% url 'payment' %}" 
+   class="btn btn-primary position-absolute px-5 py-2 rounded-pill"
+   style="top: 250px;left: 700px; transform: translateY(-50%); background-color: rgb(35, 35, 189);color: black;font-weight: 700;">
+  Join Now
+</a>  </div>
 </section>
 
 <!-- What DEE PLUS Stands For -->
 <section class="container-xxl section-pad">
-  <h5 class="section-title text-purple fw-bold text-center">What DEE PLUS <span class="fw-normal">Stands For</span></h5>
+  <h5 class="section-title fw-bold text-center" style="color: #7c5aa3; font-size: x-large;">What DEE PLUS <span class="fw-normal" style="color: white;">Stands For</span></h5>
   <div class="row g-4 align-items-center m-5 position-relative">
 
 
     <div class="col-lg-6">
       <div class="acronym">
-        <div class="row g-3">
+        <div class="row g-5">
           {% comment %} Left list for letters {% endcomment %}
           <div class="col-12">
-            <ul class="list-unstyled acronym-list">
-              <li><span class="letter">M</span> <span class="item"><strong>Mindfulness</strong><small>Being aware of the present</small></span></li>
-              <li><span class="letter">E</span> <span class="item"><strong>Equanimity</strong><small>Calm and balanced emotions</small></span></li>
-              <li><span class="letter">D</span> <span class="item"><strong>Discipline</strong><small>Consistency in practice</small></span></li>
-              <li><span class="letter">I</span> <span class="item"><strong>Inner Peace</strong><small>A state of deep tranquility</small></span></li>
-              <li><span class="letter">T</span> <span class="item"><strong>Tranquility</strong><small>Soothing the restless mind</small></span></li>
-              <li><span class="letter">A</span> <span class="item"><strong>Awareness</strong><small>Conscious observation without reaction</small></span></li>
-              <li><span class="letter">T</span> <span class="item"><strong>Transformation</strong><small>Gradual personal growth</small></span></li>
-              <li><span class="letter">I</span> <span class="item"><strong>Intention</strong><small>Clarity of purpose</small></span></li>
-              <li><span class="letter">O</span> <span class="item"><strong>Observation</strong><small>Watching thoughts without control</small></span></li>
-              <li><span class="letter">N</span> <span class="item"><strong>Now</strong><small>Anchoring yourself in the present moment</small></span></li>
+            <ul class="list-unstyled acronym-list" style="margin-left: 150px;">
+              <li><span class="letter">M</span> <span class="item"><strong style="color: #7c5aa3;">Mindfulness</strong><small style="color: black">Being aware of the present</small></span></li>
+              <li><span class="letter">E</span> <span class="item"><strong style="color: #7c5aa3;">Equanimity</strong><small style="color: black">Calm and balanced emotions</small></span></li>
+              <li><span class="letter">D</span> <span class="item"><strong style="color: #7c5aa3;">Discipline</strong><small style="color: black">Consistency in practice</small></span></li>
+              <li><span class="letter">I</span> <span class="item"><strong style="color: #7c5aa3;">Inner Peace</strong><small style="color: black">A state of deep tranquility</small></span></li>
+              <li><span class="letter">T</span> <span class="item"><strong style="color: #7c5aa3;">Tranquility</strong><small style="color: black">Soothing the restless mind</small></span></li>
+              <li><span class="letter">A</span> <span class="item"><strong style="color: #7c5aa3;">Awareness</strong><small style="color: black">Conscious observation without reaction</small></span></li>
+              <li><span class="letter">T</span> <span class="item"><strong style="color: #7c5aa3;">Transformation</strong><small style="color: black">Gradual personal growth</small></span></li>
+              <li><span class="letter">I</span> <span class="item"><strong style="color: #7c5aa3;">Intention</strong><small style="color: black">Clarity of purpose</small></span></li>
+              <li><span class="letter">O</span> <span class="item"><strong style="color: #7c5aa3;">Observation</strong><small style="color: black">Watching thoughts without control</small></span></li>
+              <li><span class="letter">N</span> <span class="item"><strong style="color: #7c5aa3;">Now</strong><small style="color: black">Anchoring yourself in the present moment</small></span></li>
             </ul>
           </div>
         </div>
@@ -44,7 +47,7 @@
    
     <div class="col-lg-6">
       <div class="yoga-card text-center">
-        <img src="{% static 'images/meditation.jpg' %}" class="yoga-img" alt="Yoga">
+        <img src="{% static 'images/meditation.jpg' %}" class="yoga-img" alt="Yoga" style=" mix-blend-mode: multiply;">
         <div class="mt-3">
           <h6 class="text-purple fw-bold">In Therapy Helps With</h6>
           <ul class="small list-unstyled mb-0">
@@ -60,22 +63,38 @@
 </section>
 
 <!-- Clinic Intro -->
-<section class="container-xxl section-pad">
+
+
+<section class="container-xxl section-pad" 
+         style="background: url('{% static 'images/bg.jpg' %}') no-repeat center center / cover;">
   <div class="row g-4 align-items-center intro-card rounded-4 p-3 p-md-4">
+    
+    <!-- Left image column -->
     <div class="col-lg-5">
       <img src="{% static 'images/clinic.jpg' %}" class="w-100 rounded-3" alt="Clinic">
     </div>
-    <div class="col-lg-7">
-      <p class="small text-muted mb-1">Welcome To</p>
-      <h4 class="fw-bold text-purple mb-2">Private Psychiatry<br>&amp; Therapy Clinic</h4>
-      <p class="mb-3">A specialized healthcare facility offering confidential, personalized mental health services, including psychiatric evaluations, medication management, and psychotherapy. Designed to provide discreet, compassionate care for individuals seeking support for emotional, behavioral, or psychological challenges.</p>
-      <a class="btn btn-primary-cta rounded-pill px-4" href="#">Meet Our Team</a>
-  
+    
+    <!-- Right text column -->
+    <div class="col-lg-7" style="line-height: 2;">
+      <p class="small text-muted mb-1" style="margin-left: 200px;">Welcome To</p>
+      <h4 class="fw-bold mb-2" style="color: #7c5aa3; text-align: center;">
+        Private Psychiatry<br>&amp; Therapy Clinic
+      </h4>
+      <p class="mb-3" style="text-align: center;">
+        A specialized healthcare facility offering confidential, personalized mental health 
+        services, including psychiatric evaluations, medication management, and psychotherapy. 
+        Designed to provide discreet, compassionate care for individuals seeking support for 
+        emotional, behavioral, or psychological challenges.
+      </p>
+      <a class="btn btn-primary rounded-pill px-4" href="#" 
+         style="margin-left: 250px; color: black; font-weight: 700;">
+        Meet Our Team
+      </a>
     </div>
-       
+    
   </div>
-  
 </section>
+
 
 <!-- Stats -->
 <section class="stats-bar py-3">
@@ -102,80 +121,82 @@
 </section>
 
 <!-- Services Section -->
-<section class="py-3 services-section">
+<section class="py-4 services-section" style="background-color: #fdeff2;">
   <div class="container text-center">
-    <h2 class="fw-bold mb-4 text-purple">Our Services</h2>
+    <h2 class="fw-bold mb-4 text-purple">Our Sevices</h2>
     <div class="row g-3">
-      
+
       <!-- Card 1 -->
-      <div class="col-6 col-md-4">
-        <div class="card service-card">
-          <img src="{% static 'images/services-1.jpg' %}" class="card-img-top" alt="Individual Therapy">
-          <div class="card-body">
-            <h5 class="card-title">Individual Therapy</h5>
-            <a href="#" class="read-more">Read more</a>
-          </div>
+      <div class="col-6 col-md-3">
+        <div class="service-box">
+          <h5 class="service-title">Individual Therapy</h5>
+          <a href="#" class="read-more">Read more</a>
+          <i class="bi bi-person fs-1"></i>
         </div>
       </div>
 
-      <!-- Card 2 (Active Highlight) -->
-      <div class="col-6 col-md-4">
-        <div class="card service-card active">
-          <img src="{% static 'images/couple_therapy.jpeg' %}" class="card-img-top" alt="Couples Therapy">
-          <div class="card-body">
-            <h5 class="card-title">Couples Therapy</h5>
-            <a href="#" class="read-more">Read more</a>
-          </div>
+      <!-- Card 2 (with image) -->
+      <div class="col-6 col-md-3">
+        <div class="service-box">
+          <img src="{% static 'images/services-1.jpg' %}" alt="Individual" class="service-img">
         </div>
       </div>
 
-      <!-- Card 3 -->
-      <div class="col-6 col-md-4">
-        <div class="card service-card">
-          <img src="{% static 'images/filial-therapy.jpg' %}" class="card-img-top" alt="Group Therapy">
-          <div class="card-body">
-            <h5 class="card-title">Group Therapy</h5>
-            <a href="#" class="read-more">Read more</a>
-          </div>
+      <!-- Card 3 (highlighted) -->
+      <div class="col-6 col-md-3">
+        <div class="service-box active">
+          <h5 class="service-title">Couples Therapy</h5>
+          <a href="#" class="read-more">Read more</a>
+         <i class="bi bi-people fs-1"></i>
         </div>
       </div>
 
       <!-- Card 4 -->
-      <div class="col-6 col-md-4">
-        <div class="card service-card">
-          <img src="{% static 'images/family.jpg' %}" class="card-img-top" alt="Family Therapy">
-          <div class="card-body">
-            <h5 class="card-title">Family Therapy</h5>
-            <a href="#" class="read-more">Read more</a>
-          </div>
+      <div class="col-6 col-md-3">
+        <div class="service-box">
+          <h5 class="service-title">Group Therapy</h5>
+          <a href="#" class="read-more">Read more</a>
+           <i class="bi bi-people fs-1"></i>
         </div>
       </div>
 
-      <!-- Card 5 -->
-      <div class="col-6 col-md-4">
-        <div class="card service-card">
-          <img src="{% static 'images/group.jpg' %}" class="card-img-top" alt="Group Session">
-          <div class="card-body">
-            <h5 class="card-title">Group Session</h5>
-            <a href="#" class="read-more">Read more</a>
-          </div>
+      <!-- Card 5 (with image) -->
+      <div class="col-6 col-md-3">
+        <div class="service-box">
+          <img src="{% static 'images/family.jpg' %}" alt="Family" class="service-img">
         </div>
       </div>
 
       <!-- Card 6 -->
-      <div class="col-6 col-md-4">
-        <div class="card service-card">
-          <img src="{% static 'images/online.jpg' %}" class="card-img-top" alt="Online Therapy">
-          <div class="card-body">
-            <h5 class="card-title">Online Therapy</h5>
-            <a href="#" class="read-more">Read more</a>
-          </div>
+      <div class="col-6 col-md-3">
+        <div class="service-box">
+          <h5 class="service-title">Family Therapy</h5>
+          <a href="#" class="read-more">Read more</a>
+          <i class="bi bi-people-fill fs-1"></i>
+        </div>
+      </div>
+
+      <!-- Card 7 (with image) -->
+      <div class="col-6 col-md-3">
+        <div class="service-box">
+          <img src="{% static 'images/online.jpg' %}" alt="Group Session" class="service-img">
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col-6 col-md-3">
+        <div class="service-box">
+          <h5 class="service-title">Online Therapy</h5>
+          <a href="#" class="read-more">Read more</a>
+           <i class="bi bi-laptop fs-1"></i>
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
+
 
 <!-- Testimonials Section -->
 <section class="py-5 testimonials-section">
@@ -193,9 +214,10 @@
         <!-- Testimonial 1 -->
         <div class="carousel-item active">
           <div class="testimonial-card">
-            <img src="{% static 'images/user2.avif' %}" class="rounded-circle" width="50" alt="Client">
+            <img src="{% static 'images/user2.avif' %}" class="rounded-circle" width="50" alt="Client" style="left: 500px;">
             <p class="mb-2">"This therapy really changed my life! I feel calmer and happier now."</p>
-            <small>- Client 1</small>
+            <br>
+            <!-- <small>- Client 1</small> -->
           </div>
         </div>
 
@@ -204,7 +226,7 @@
           <div class="testimonial-card">
             <img src="{% static 'images/user3.avif' %}" class="rounded-circle mb-3" width="50" height="50" alt="Client">
             <p class="mb-2">"The sessions are amazing, and the therapist is very understanding."</p>
-            <small>- Client 2</small>
+            <!-- <small>- Client 2</small> -->
           </div>
         </div>
 
@@ -213,7 +235,7 @@
           <div class="testimonial-card">
             <img src="{% static 'images/user4.jpg' %}" class="rounded-circle mb-3" width="50" alt="Client">
             <p class="mb-2">"I finally feel at peace with myself after these sessions."</p>
-            <small>- Client 3</small>
+            <!-- <small>- Client 3</small> -->
           </div>
         </div>
 
@@ -222,7 +244,7 @@
           <div class="testimonial-card">
             <img src="{% static 'images/user.avif' %}" class="rounded-circle mb-3" width="50" height="50" alt="Client">
             <p class="mb-2">"The guidance I received here was life-changing."</p>
-            <small>- Client 4</small>
+            <!-- <small>- Client 4</small> -->
           </div>
         </div>
 
@@ -250,7 +272,9 @@
 
 
 <!-- Team Carousel -->
-<div id="teamCarousel" class="carousel slide mt-3" data-bs-ride="carousel" data-bs-interval="3000">
+<div id="teamCarousel" class="carousel slide m-5" data-bs-ride="carousel" data-bs-interval="3000">
+<h5 class="text-muted" style="text-align: center;">Meet our Therapists</h5>
+    <h2 class="fw-bold text-purple" style="text-align: center;">Our Team</h2>
   <div class="carousel-inner">
     {% for member in team_members %}
       {% if forloop.counter0|divisibleby:4 %}
@@ -259,7 +283,7 @@
       {% endif %}
 
         <div class="col-6 col-md-3">
-          <div class="card team-card h-100 border-0">
+          <div class="card team-card h-100 border-0" style="background-color: #cdecc9;">
             <img src="{% static member.img %}" class="card-img-top" alt="{{ member.name }}">
             <div class="card-body text-center">
               <div class="fw-bold small">{{ member.name }}</div>

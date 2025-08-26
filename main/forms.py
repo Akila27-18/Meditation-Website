@@ -74,7 +74,9 @@ PAYMENT_CHOICES = [
 ]
 
 class PaymentForm(forms.Form):
-    payment_method = forms.ChoiceField(
+    payment_method = forms.MultipleChoiceField(
         choices=PAYMENT_CHOICES,
-        widget=forms.RadioSelect(attrs={"class": "form-check-input"})
+        widget=forms.CheckboxSelectMultiple(attrs={"class": "form-check-input"}),
+        required=True
     )
+
