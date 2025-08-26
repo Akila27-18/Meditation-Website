@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["meditation-website-2-ku5k.onrender.com", "localhost", "127.0.0.1"]
 
-
 # Application definition
 
 INSTALLED_APPS = [
